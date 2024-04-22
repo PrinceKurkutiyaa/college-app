@@ -1,4 +1,4 @@
-You have to add modules cause node_modules is very vast in size. So its better you install them using NPM
+You have to add modules cause node_modules is very vast in size. So its better you install them using NPM. <br>
 HERE ARE MY NODE MODULES THAT I HAD USED IN THIS PROJECT =>
 
 @react-navigation/native <br>

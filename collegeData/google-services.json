@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "672431581073",
+    "project_id": "collegeapp-ffad6",
+    "storage_bucket": "collegeapp-ffad6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672431581073:android:f97ec684ea398984499c30",
+        "android_client_info": {
+          "package_name": "app.collegeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLulJHpj1D5VDbR0TdR5omWCtIgTWGgNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

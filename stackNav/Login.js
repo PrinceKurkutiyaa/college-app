@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Button, FlatList, ScrollView, TextInput, TouchableHighlight, ImageBackground, TouchableOpacity } from 'react-native';     //Have an external file in style folder 
+import { View, Text, Button, FlatList, ScrollView, TextInput, TouchableHighlight, ImageBackground, TouchableOpacity, Image } from 'react-native';     //Have an external file in style folder 
 import { NavigationContainer, useLinkProps } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/FontAwesome'
+import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import styles from '../style/styles';
+import LinearGradient from 'react-native-linear-gradient';
 
 const stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -18,9 +21,12 @@ const Login = (props) => {
   const [password, setPassword] = useState('')
 
   const [fill, setFill] = useState(1)
-  
+
   const [nameError, setNameError] = useState(false)
   const [passError, setPassError] = useState(false)
+
+  const [hide, setHide] = useState(false)
+  const [show, setShow] = useState(false)
 
   //Admin Details
 
@@ -40,72 +46,111 @@ const Login = (props) => {
     if (!email || !password) {
       return false
     }
-  
+
     //Authentication   
-    if(fill === 1){
-    const isUserLogin = await auth().signInWithEmailAndPassword(email, password)
-    console.log(isUserLogin)
-    if (isUserLogin.user.emailVerified) {
-      
+    if (fill === 1) {
+      const isUserLogin = await auth().signInWithEmailAndPassword(email, password)
+      console.log(isUserLogin)
+      if (isUserLogin.user.emailVerified) {
+
         console.warn('Student Login Successfully')
-        navigation.navigate('MainDrawer');    
+        navigation.navigate('MainDrawer');
       }
-  }else if (fill === 2){
-      
-      if(email === adminLogin && password == adminPass ){
+    } else if (fill === 2) {
+
+      if (email === adminLogin && password == adminPass) {
         console.warn("Admin check")
         navigation.navigate('Admin Page')
-      }else{
+      } else {
         console.warn("Admin Not FOUND")
       }
-  }
-};
+    }
+  };
   return (
-    <View style={{ flex: 1, backgroundColor: 'lavender', }}>
+    <LinearGradient colors={['#FFFFFF', '#7c7c7c', '#000000']} style={{flex:1}}>
+      
       <View style={{
-        flex: 1.6,
-        margin: 50,
-        backgroundColor: 'Lavender',
-        justifyContent: 'flex-end',
-        alignContent: 'flex-end'
-      }}>
+        flex: 1,
+        padding: 40,
+      }}> 
+      <View style={{justifyContent:'center',alignItems:'center'}}>
+          <Image source={require('../collegeData/collegeBackgroundPNG.png')} style={{height:150,width:150}}/>
+        </View>
+          <View>
+            <Text style={{color:'black',fontSize:11,paddingBottom:3,fontFamily:'monospace',letterSpacing:1,}}>
+              EMAIL ADDRESS
+            </Text>
+          </View>
+        <View style={{ flexDirection: 'row',borderBottomWidth:2, borderRadius:1,borderBottomColor:'#f4f6f7',backgroundColor:'#383d41' }}>
+          <View style={{ justifyContent: "center", alignItems: 'center', marginHorizontal: 10 }}>
+            <Icon name='user' style={{ fontSize: 25,color:'#00ff66' }} />
+          </View>
+          <TextInput style={{flex:1,color:'white' }}
+            placeholder='Email'
+            value={email}
+            onChangeText={(value) => setEmail(value)}
+          />
 
-        <ImageBackground source={require('../collegeData/collegeBackgroundPNG.png')} style={{ height: 230, width: 230, opacity: 0.4, left: 20, top: 120,flex:1}} />
-        <TextInput style={{ justifyContent: 'center', alignContent: 'center', borderColor: 'black', borderWidth: 2, borderRadius: 10 }}
-          placeholder='Email'
-          value={email}
-          onChangeText={(value) => setEmail(value)}
-        />
+        </View>
         {
           nameError ? <Text style={{ color: 'red' }}>Please enter valid Email</Text> : null
         }
 
-        <View style={{ paddingTop: 10,}}>
-          <TextInput style={{ justifyContent: 'center', alignContent: 'center', borderColor: 'black', borderWidth: 2, borderRadius: 10 }}
-            placeholder='Password'
-            secureTextEntry={true}
-            value={password}
-            onChangeText={(text) => setPassword(text)}
-          />
+        <View style={{ paddingTop: 10 }}>
+          <View>
+            <Text style={{color:'black',fontSize:11,paddingBottom:3,fontFamily:'monospace',letterSpacing:1}}>
+              PASSWORD
+            </Text>
+          </View>
+          
+            <View style={{ flexDirection: 'row',borderBottomWidth:2, borderRadius:1,borderBottomColor:'#f4f6f7',backgroundColor:'#383d41'}}>
+              <View style={{ justifyContent: 'center', alignItems: "center", marginHorizontal: 10 }}>
+                <Icons name="key" style={{ fontSize: 25 ,color:'#00ff66'}} />
+              </View>
+              <TextInput
+                style={{flex:1,color:'white'}}
+                placeholder='Password'
+                secureTextEntry={!show}
+                value={password}
+                onChangeText={(text) => setPassword(text)}
+              />
 
-          {
-            passError ? <Text style={{ color: 'red' }}>Please enter valid password</Text> : null
+              <TouchableOpacity
+                style={{}}
+                onPress={() => setShow(!show)}
+              >
+                {show ?
+                  <View style={{flex:1,justifyContent:'center',alignItems:'center',paddingRight:10}}>
+                    <Icon name='eye' style={{ fontSize: 25,color:'#00ff66' }} />
+                  </View>
+                  :
+                  <View style={{flex:1,justifyContent:'center',alignItems:'center',paddingRight:10}}>
+                    <Icon name='eye-slash' style={{ fontSize: 25,color:'#00ff66' }} />
+                  </View>
+                }
+              </TouchableOpacity>
+            </View>
+          
+
+          {/* Error message text */}
+          {passError &&
+            <Text style={{ color: 'red' }}>Please enter a valid password</Text>
           }
         </View>
-      </View>
-      < View style={{ alignItems: 'center', margin: 5, paddingBottom: 20 }}>
+      
+      < View style={{ alignItems: 'center', margin: 5, padding:5}}>
         <TouchableHighlight
           onPress={() => props.navigation.navigate('Forget Password')}
           underlayColor='rgba(800,500,255,0.5)'
         >
           <View>
-            <Text>Forget Password?</Text>
+            <Text style={{color:'black',fontSize:11,fontFamily:'monospace',letterSpacing:1}}>FORGET YOUR PASSWORD?</Text>
           </View>
         </TouchableHighlight>
       </View>
       {/*  //for student   */}
-      <View style={{ flexDirection: 'row', paddingBottom: 20,alignItems:'center',paddingBottom:40 }}>
-        <View style={{paddingHorizontal:50}} >
+      <View style={{ flexDirection: 'row', alignItems: 'center',justifyContent:'center' }}>
+        <View style={{ margin:15}} >
           <TouchableOpacity
             onPress={() => setFill(1)}
             underlayColor='rgba(800,500,255,0.5)'
@@ -113,55 +158,84 @@ const Login = (props) => {
             <View style={{ flexDirection: 'row' }}>
               {
                 fill === 1 ?
-                <View style={{ backgroundColor: 'purple',alignItems:'center',justifyContent:'center',height:30,width:130,borderRadius:30}}>
-                <Text style={{color:'white',fontWeight:'bold'}}>Login as Student</Text>
-              </View>
-                  : <Text style={{ fontWeight: 'bold' }}>Login as Student</Text>
+                  <View style={{ paddingHorizontal:30,paddingVertical:10, borderRadius: 30 ,borderColor:'#00dc00',borderWidth:1}}>
+                    <Text style={{ color: '#00ff66'}}>STUDENT</Text>
+                  </View>
+                  : 
+                  <View style={{paddingHorizontal:30,paddingVertical:10, }}>
+                  <Text style={{ color:'white'}}>STUDENT</Text>
+                  </View>
               }
             </View>
           </TouchableOpacity>
         </View>
-        <View>
+        <View style={{margin:15}}>
           <TouchableOpacity
             onPress={() => setFill(2)}
             underlayColor='rgba(800,500,255,0.5)'
           >
-                {
-                  fill === 2 ?
-                    <View style={{ backgroundColor: 'purple',alignItems:'center',justifyContent:'center',height:30,width:130,borderRadius:30}}>
-                      <Text style={{color:'white',fontWeight:'bold'}}>Login as Admin</Text>
-                    </View>
-                    : <Text style={{ fontWeight: 'bold' }} >Login as Admin</Text>
-                }
-              
-            
+            {
+              fill === 2 ?
+                <View style={{paddingHorizontal:30,paddingVertical:10, borderRadius: 30 ,borderColor:'#00dc00',borderWidth:1 }}>
+                  <Text style={{ color: '#00ff66' }}>ADMIN</Text>
+                </View>
+                : 
+                <View style={{paddingHorizontal:30,paddingVertical:10, }}>
+                <Text style={{ color:'white'}} >ADMIN</Text>
+                </View>
+            }
           </TouchableOpacity>
         </View>
 
       </View>
 
-      <View style={styles.flex}>
+      <View style={{}}>
         <TouchableHighlight
           onPress={handlePress}
           underlayColor="rgba(800, 500, 255, 0.5)" // Set the color when the button is pressed
-          style={{ borderRadius: 5 }}>
-          <View style={styles.button}>
-            <Text style={{ color: '#fff' , fontWeight:'bold',fontSize:17}}>Login</Text>
+          style={{borderWidth:1,borderColor:'#00dc00',justifyContent:'center',alignItems:'center',borderRadius:30 }}>
+          <View style={{padding:10}}>
+            <Text style={{ color: '#00ff66', fontWeight: 'bold', fontSize: 17 }}>LOG IN</Text>
           </View>
         </TouchableHighlight>
-        <View style={{ flexDirection: 'row', paddingTop: 50 }}>
-          <Text > Don't have account? </Text>
+        <View style={{ paddingTop: 10,justifyContent:'center',alignItems:'center' }}>
+          <Text style={{ color:'black',letterSpacing:1,fontSize:12,fontFamily:'monospace'}}  > Don't have account yet? </Text>
+          <View style={{paddingTop:8,}}>
           <TouchableHighlight
             onPress={() => props.navigation.navigate('Create an Account')}
             underlayColor="rgba(800, 500, 255, 0.5)" // Set the color when the button is pressed
-            style={{ borderRadius: 5 }}>
-            <View>
-              <Text style={{ color: 'black' }}>Signup</Text>
+            style={{borderWidth:1,borderColor:'white',justifyContent:'center',alignItems:'center',borderRadius:30,backgroundColor:'#232629'}}>
+            <View style={{padding:10,paddingHorizontal:80}}>
+              <Text style={{ color:'white',letterSpacing:1}} >CREATE ACCOUNT</Text>
             </View>
           </TouchableHighlight>
+          </View>
         </View>
       </View>
-    </View>
+      {/* <View style={{justifyContent:'center',alignItems:'center'}}>
+      <View >
+        <TouchableOpacity>
+          <View style={{paddingBottom:50}}>
+            <Text style={{color:'white',fontSize:11,fontFamily:'monospace',letterSpacing:1}}>
+              SETUP INSTRUCTIONS
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+
+      <View>
+        <TouchableOpacity>
+          <View style={{justifyContent:'center',alignItems:'center'}}>
+            <Text style={{color:'white',fontSize:11,fontFamily:'monospace',letterSpacing:1}}>
+              CAN'T LOG IN? EMAIL SUPPORT
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+      </View> */}
+
+      </View>
+    </LinearGradient>
 
   );
 };

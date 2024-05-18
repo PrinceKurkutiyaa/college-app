@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Button,TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Button, TouchableOpacity } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,22 +10,44 @@ const AddStudent = () => {
 
     const navigation = useNavigation();
 
-    const check = ()=>{
-        
-    if (selcetedSemester == 6 && selectedBranch === "Computer") {
-        console.warn("workin")
-        navigation.navigate('Student Data')
-    }
-    else{
-        console.warn('Not Wokring MF')
-    }
+    const check = () => {
+
+        if (selectedBranch === "Computer") {
+            if (selcetedSemester == 1) {
+                console.warn("1st sem")
+                navigation.navigate('1st Sem Computer')
+            }
+            else if (selcetedSemester == 2) {
+                console.warn("2nd sem")
+                navigation.navigate('2nd Sem Computer')
+            }
+            else if (selcetedSemester == 3) {
+                console.warn("3rd sem")
+                navigation.navigate('3rd Sem Computer')
+            }
+            else if (selcetedSemester == 4) {
+                console.warn("4th sem")
+                navigation.navigate('4th Sem Computer')
+            }
+            else if (selcetedSemester == 5) {
+                console.warn("5th sem")
+                navigation.navigate('5th Sem Computer')
+            }
+            else if (selcetedSemester == 6) {
+                console.warn("workin")
+                navigation.navigate('Student Data')
+            }
+        }
+        else {
+            console.warn('Not Wokring MF')
+        }
 
     }
 
 
     return (
         <View style={styles.container}>
-            <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderWidth: 2, borderRadius: 20, padding: 10 ,marginBottom:20}}>
+            <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderWidth: 2, borderRadius: 20, padding: 10, marginBottom: 20 }}>
                 <Text style={{ fontSize: 17 }}> Select a Branch:</Text>
                 <View style={{ borderWidth: 1, borderColor: 'black', borderRadius: 20 }}>
                     <Picker
@@ -60,11 +82,11 @@ const AddStudent = () => {
                     </Picker>
                 </View>
             </View>
-            <TouchableOpacity 
-            style={{backgroundColor:'purple',padding:20,borderRadius:20,marginTop:20 }}
-            onPress={()=>check()}>
+            <TouchableOpacity
+                style={{ backgroundColor: '#7420ff', padding: 20, borderRadius: 20, marginTop: 20 }}
+                onPress={() => check()}>
 
-                <Text style={{color:'#fff'}}>
+                <Text style={{ color: '#fff' }}>
                     ADD
                 </Text>
             </TouchableOpacity>

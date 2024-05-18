@@ -3,7 +3,7 @@ import { View, Text, Button, FlatList, ScrollView, TextInput, TouchableHighlight
 import styles from '../style/styles';     //Have an external file in style folder 
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
-
+import { Picker } from '@react-native-picker/picker';
 
 const Create = (props) => {
   const [name, setName] = useState("")
@@ -11,7 +11,8 @@ const Create = (props) => {
   const [email, setEmail] = useState("")
   const [roll, setRoll] = useState("")
   const [no, setNo] = useState('')
-
+   
+  const [selectedBranch,setSelectedBranch] = useState('')
 
   const [rollError, setRollError] = useState(false)
   const [textInput, setTextInput] = useState(false)
@@ -59,7 +60,7 @@ const Create = (props) => {
       console.log('User UID:', id);
 
       if (response) {
-        await firestore().collection('collegedata').doc(id).set({ name, password, email, no, roll })
+        await firestore().collection('Users Login data').doc(id).set({ name, password, email, no, roll ,Branch : selectedBranch})
         console.log('Data Added')
         //sending verification link
         await auth().currentUser.sendEmailVerification();
@@ -101,9 +102,9 @@ const Create = (props) => {
   // }
   return (
 
-  <ScrollView style={{ backgroundColor: 'lavender' }}>
+    <ScrollView style={{ backgroundColor: 'lavender' }}>
 
-    <View style={{ flex: 1, justifyContent: 'flex-start', backgroundColor: 'lavender', bottom: 150, padding: 10 }} >
+      <View style={{ flex: 1, justifyContent: 'flex-start', backgroundColor: 'lavender', bottom: 150, padding: 10 }} >
         <ImageBackground source={require('../collegeData/collegeBackgroundPNG.png')} style={{ height: 230, width: 230, opacity: 0.4, left: 60, top: 330, flex: 1 }} />
         <Text style={{ fontSize: 20, }}> Username:</Text>
         <TextInput style={{ justifyContent: 'center', alignContent: 'center', borderColor: 'black', borderWidth: 2, borderRadius: 10 }}
@@ -128,17 +129,34 @@ const Create = (props) => {
 
         <View style={{}} >
           <Text style={{ fontSize: 20, }}> Roll no:</Text>
-          <TextInput style={{ justifyContent: 'flex-end', alignContent: 'center', borderColor: 'black', borderWidth: 2, borderRadius: 10, }}
+          <View style={{flexDirection:'row',borderWidth:2,borderRadius:20}} >
+          <TextInput style={{}}
             placeholder='Roll number'
-            onChangeText={(text) => setRoll(text)} 
+            onChangeText={(text) => setRoll(text)}
             keyboardType='numeric'
-            />
+          />
+           <View style={{paddingHorizontal:80}}>
+          <Picker   
+            selectedValue={selectedBranch}
+            style={{ width: 200}}
+            onValueChange={(itemValue, itemIndex) => setSelectedBranch(itemValue)}
+          >
+            <Picker.Item label="Select a Branch" />
+            <Picker.Item label="Computer" value="Computer" />
+            <Picker.Item label="Electronics" value="Electronics" />
+            <Picker.Item label="Electrical" value="Electrical" />
+            <Picker.Item label="Mechanical" value="Mechanical" />
+            <Picker.Item label="Plastic" value="Plastic" />
+          </Picker>
+          </View>
+          </View>
         </View>
 
         {
           rollError ? <Text style={{ color: 'red' }}>Please enter valid Roll number</Text> : null
         }
-
+        
+       
         <View style={{}}>
           <Text style={{ fontSize: 20, }}> Enter Email:</Text>
           <TextInput style={{ justifyContent: 'center', alignContent: 'center', borderColor: 'black', borderWidth: 2, borderRadius: 10, }}
@@ -198,8 +216,8 @@ const Create = (props) => {
           </TouchableHighlight>
         </View>
 
-    </View>
-  </ScrollView>
+      </View>
+    </ScrollView>
 
   );
 };

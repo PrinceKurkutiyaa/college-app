@@ -9,7 +9,7 @@ const AttendenceMain = () =>{
     return(
         <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
             <TouchableOpacity
-            style={{padding:20,backgroundColor:'purple',borderRadius:20,marginBottom:20,paddingHorizontal:30}}
+            style={{padding:20,backgroundColor:'#7420ff',borderRadius:20,marginBottom:20,paddingHorizontal:30}}
             onPress={()=>navigation.navigate('Add Student')}
             >
                 <Text style={{color:'#fff'}}>
@@ -18,7 +18,7 @@ const AttendenceMain = () =>{
             </TouchableOpacity>
             <TouchableOpacity 
             onPress={()=>navigation.navigate('Take Attendence')}
-            style={{padding:20,backgroundColor:'purple',borderRadius:20,marginBottom:20}}
+            style={{padding:20,backgroundColor:'#7420ff',borderRadius:20,marginBottom:20}}
             >
                 <Text style={{color:'#fff'}}>
                     Take Attendence
@@ -26,7 +26,7 @@ const AttendenceMain = () =>{
             </TouchableOpacity>
             <TouchableOpacity 
             onPress={()=>navigation.navigate('Calender')}
-            style={{padding:20,backgroundColor:'purple',borderRadius:20,paddingHorizontal:45}}
+            style={{padding:20,backgroundColor:'#7420ff',borderRadius:20,paddingHorizontal:45}}
             >
                 <Text style={{color:'#fff'}}>
                     Calender

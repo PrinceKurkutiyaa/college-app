@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 
   },button: {
     padding: 10,
-    backgroundColor: 'purple',
+    backgroundColor: '#7420ff',
     borderRadius: 5,
   },
   flex: {
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   button: {
     padding: 10,
-    backgroundColor: 'purple',
+    backgroundColor: '#7420ff',
     borderRadius: 5,
   
   },

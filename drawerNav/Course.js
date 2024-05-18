@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import MainNavigator from '../stackNav/MainNavigator';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -13,6 +14,7 @@ const Course = () => {
     const navigation = useNavigation();
     return (
     <View style={{ flex: 1, flexDirection: 'row' }}>
+         <LinearGradient colors={['#c8b1ff', '#8e49ff', '#6518bf']}>
         <ScrollView style={{ flexDirection: 'row', marginHorizontal: 22 }} horizontal={true} pagingEnabled >
                 <View>
                     <TouchableOpacity
@@ -76,6 +78,7 @@ const Course = () => {
                 </TouchableOpacity>
             </View>
         </ScrollView>
+        </LinearGradient>
     </View>
 
     )

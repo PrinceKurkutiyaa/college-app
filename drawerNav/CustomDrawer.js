@@ -27,7 +27,7 @@ const CustomDrawer = (props) => {
     }
   };
   return (
-    <LinearGradient colors={['#FFFFFF', '#7c7c7c', '#000000']} style={{flex:1}}>
+    <LinearGradient colors={['#FFFFFF', '#f6f6f6']} style={{flex:1}}>
       <View style = {{justifyContent:'center',alignItems:'center',padding:20,paddingBottom:20}}>
       <Image
         source={require('../collegeData/collegeBackgroundPNG.png')}
@@ -45,7 +45,7 @@ const CustomDrawer = (props) => {
           onPress={handleLogout}
           underlayColor="rgba(800, 500, 255, 0.5)" // Set the color when the button is pressed
           style={{ borderRadius: 5 }}>
-          <View style={{  padding: 15, margin: 30,backgroundColor:'red',borderRadius:30,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+          <View style={{  padding: 10, margin: 20,backgroundColor:'red',borderRadius:30,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
             <Text style={{color:'#fff',fontSize:17,fontWeight:'bold'}}>LOG OUT</Text>
             <Icon name="sign-out" style ={{fontSize:30,paddingHorizontal:10,color:'white'}}/>
           </View>

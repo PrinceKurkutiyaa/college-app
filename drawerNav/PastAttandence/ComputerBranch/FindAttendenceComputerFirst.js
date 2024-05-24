@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, FlatList, SectionList, ScrollView } from "react-native";
+import { View, Text, FlatList, SectionList, ScrollView ,Button, Alert,TouchableOpacity} from "react-native";
 import firestore from '@react-native-firebase/firestore';
 import PastAttandence from "../PastAttandence";
 import LinearGradient from "react-native-linear-gradient";
+import Icon from 'react-native-vector-icons/Foundation';
+import XLSX from 'xlsx';
+import RNFS from 'react-native-fs';
 
 const FindAttendanceComputerFirst = ({ route }) => {
     const [computer6thSemData, setComputer6thSemData] = useState([]);
@@ -210,12 +213,44 @@ const FindAttendanceComputerFirst = ({ route }) => {
             console.log(error)
         }
     }
+
+    const exportToExcel = async () => {
+        console.warn('called')
+        const wb = XLSX.utils.book_new();
+        const data = [
+            ['Name', 'Roll', 'Period 1', 'Period 2', 'Period 3', 'Period 4', 'Period 5', 'Period 6'],
+            ...peroidData.map((item, index) => [
+                item.name,
+                item.roll,
+                peroid1[index]?.boolean ? 'P' : 'A',
+                peroid2[index]?.boolean ? 'P' : 'A',
+                peroid3[index]?.boolean ? 'P' : 'A',
+                peroid4[index]?.boolean ? 'P' : 'A',
+                peroid5[index]?.boolean ? 'P' : 'A',
+                peroid6[index]?.boolean ? 'P' : 'A'
+            ])
+        ];
+        const ws = XLSX.utils.aoa_to_sheet(data);
+        XLSX.utils.book_append_sheet(wb, ws, 'Attendance');
+        const wbout = XLSX.write(wb, { type: 'binary', bookType: 'xlsx' });
+
+        const path = `${RNFS.DownloadDirectoryPath}/attendance_1st_Sem${selectedDate}.xlsx`;
+        await RNFS.writeFile(path, wbout, 'ascii')
+            .then(() => {
+                Alert.alert('Excel file written at ',`${path}`);
+            })
+            .catch((error) => {
+                console.error("Error writing file: ", error);
+            });
+    };
+
+
     return (
-        <ScrollView>
-            <LinearGradient colors={['#c8b1ff', '#8e49ff', '#6518bf']}>
+        <ScrollView style={{flex:1}}>
+            <LinearGradient colors={['#FFFFFF', '#f6f6f6']} style={{flex:1}}>
             <View style={{ justifyContent: 'center', alignItems: 'center', paddingBottom: 30 }}>
-                <Text style={{ fontSize: 30, fontWeight: '900', paddingBottom: 10,color:'white' }}>Computer 6th Semester</Text>
-                <Text style={{ fontSize: 20, fontWeight: '500',color:'white' }}>
+                <Text style={{ fontSize: 30, fontWeight: '900', paddingBottom: 10,color:'black' }}>Computer 1st Semester</Text>
+                <Text style={{ fontSize: 20, fontWeight: '500',color:'black' }}>
                     Selected Date: {selectedDate}
                 </Text>
             </View>
@@ -224,7 +259,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                     <View style={{ backgroundColor: 'lightgreen', padding: 10, borderRadius: 60 }}>
 
                     </View>
-                    <Text style={{color:'white',paddingHorizontal:5}}>
+                    <Text style={{color:'black',paddingHorizontal:5}}>
                         Present
                     </Text>
                 </View>
@@ -232,7 +267,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                     <View style={{ justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20, flexDirection: 'row' }}>
                         <View style={{ backgroundColor: 'red', padding: 10, borderRadius: 60 }}>
                         </View>
-                        <Text style={{color:'white',paddingHorizontal:5}}>
+                        <Text style={{color:'black',paddingHorizontal:5}}>
                             Absent
                         </Text>
                     </View>
@@ -244,10 +279,22 @@ const FindAttendanceComputerFirst = ({ route }) => {
                     <Text style={{fontWeight:'900'}} >Peroid 1</Text>
                 </View>
             </View> */}
+             <View style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+          <TouchableOpacity onPress={exportToExcel}>
+            <View style={{flexDirection: 'row'}}>
+              <Text>
+              </Text>
+              <Icon
+                name="download"
+                style={{fontSize: 40, color: 'black',paddingHorizontal:20}}></Icon>
+            </View>
+
+          </TouchableOpacity>
+        </View>
             <View style={{ flexDirection: 'row' }}>
                 <View>
                     <View style={{ alignItems: 'center', borderWidth: 1, marginLeft: 5 }}>
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white'}}>Students</Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black'}}>Students</Text>
                     </View>
                     <FlatList
                         data={peroidData}
@@ -265,11 +312,11 @@ const FindAttendanceComputerFirst = ({ route }) => {
                                 <View style={{ flexDirection: 'row' }}>
 
                                     <View style={{ justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 17, color: 'white' }}>{index + 1}.</Text>
+                                        <Text style={{ fontSize: 17, color: 'black' }}>{index + 1}.</Text>
                                     </View>
                                     <View style={{ paddingHorizontal: 10 }}>
-                                        <Text style={{ fontSize: 15, color: 'white' }}>Name: {item.name}</Text>
-                                        <Text style={{ fontSize: 15, color: 'white' }}>Roll: {item.roll}</Text>
+                                        <Text style={{ fontSize: 15, color: 'black' }}>Name: {item.name}</Text>
+                                        <Text style={{ fontSize: 15, color: 'black' }}>Roll: {item.roll}</Text>
                                     </View>
 
 
@@ -280,7 +327,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                 <View style={{flexDirection:'row'}}>
     
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 1 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 1 </Text>
                         <FlatList
                             data={peroid1}
                             keyExtractor={(item) => item.id}
@@ -299,7 +346,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 2 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 2 </Text>
                         <FlatList
                             data={peroid2}
                             keyExtractor={(item) => item.id}
@@ -318,7 +365,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 3 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 3 </Text>
                         <FlatList
                             data={peroid3}
                             keyExtractor={(item) => item.id}
@@ -337,7 +384,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 4 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 4 </Text>
                         <FlatList
                             data={peroid4}
                             keyExtractor={(item) => item.id}
@@ -356,7 +403,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 5 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 5 </Text>
                         <FlatList
                             data={peroid5}
                             keyExtractor={(item) => item.id}
@@ -375,7 +422,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 6 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 6 </Text>
                         <FlatList
                             data={peroid6}
                             keyExtractor={(item) => item.id}
@@ -396,6 +443,7 @@ const FindAttendanceComputerFirst = ({ route }) => {
                 </View>
 
             </View>
+            
             </LinearGradient>
         </ScrollView>
     );

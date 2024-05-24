@@ -6,13 +6,13 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const SplashScreen = () => {
   return (
-    <LinearGradient colors={['#FFFFFF', '#7c7c7c', '#000000']} style={styles.container}>
+    <LinearGradient colors={['#FFFFFF', '#f6f6f6']} style={styles.container}>
       <Image
         source={require('../collegeData/collegeBackgroundPNG.png')}
         style={styles.image}
       />
       <View>
-        <Text style={{fontWeight:'900',paddingTop:50,fontSize:20,color:'white'}}>
+        <Text style={{fontWeight:'900',paddingTop:50,fontSize:20,color:'#383d41'}}>
             Welcome to Chhotu Ram Polytechnic
         </Text>
       </View>

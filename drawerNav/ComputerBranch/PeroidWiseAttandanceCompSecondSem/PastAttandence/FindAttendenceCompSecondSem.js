@@ -212,7 +212,7 @@ const FindAttendanceCompSecondSem = ({ route }) => {
     }
     return (
         <ScrollView>
-            <LinearGradient colors={['#c8b1ff', '#8e49ff', '#6518bf']}>
+            <LinearGradient colors={['#FFFFFF', '#f6f6f6']}>
             <View style={{ justifyContent: 'center', alignItems: 'center', paddingBottom: 30 }}>
                 <Text style={{ fontSize: 30, fontWeight: '900', paddingBottom: 10,color:'white' }}>Computer 2nd Semester</Text>
                 <Text style={{ fontSize: 20, fontWeight: '500',color:'white' }}>

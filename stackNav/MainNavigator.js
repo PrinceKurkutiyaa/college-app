@@ -167,6 +167,18 @@ import PastAttandenceCompThirdSem from '../drawerNav/ComputerBranch/PeroidWiseAt
 import PastAttandenceCompFourthSem from '../drawerNav/ComputerBranch/PeroidWiseAttandanceCompFourthSem/PastAttandence/PastAttandenceCompFourthSem';
 import PastAttandenceCompFifthSem from '../drawerNav/ComputerBranch/PeroidWiseAttandanceCompFifthSem/PastAttandence/PastAttandenceCompFifthSem';
 import PastAttandenceCompSixthSem from '../drawerNav/ComputerBranch/PeroidWiseAttandanceCompSixthSem/PastAttandence/PastAttandenceCompSixthSem';
+import PastAttandenceCompFirstSemAdmin from '../AdminPage/CalenderTry/AdminFirstComp/PastAttandence/PastAttandenceCompFirstSemAdmin';
+import PastAttandenceCompSecondSemAdmin from '../AdminPage/CalenderTry/AdminSecondComp/PastAttandence/PastAttandenceCompSecondSemAdmin';
+import PastAttandenceCompThirdSemAdmin from '../AdminPage/CalenderTry/AdminThirdComp/PastAttandence/PastAttandenceCompThirdSemAdmin';
+import PastAttandenceCompFourthSemAdmin from '../AdminPage/CalenderTry/AdminFourthComp/PastAttandence/PastAttandenceCompFourthSemAdmin';
+import PastAttandenceCompFifthSemAdmin from '../AdminPage/CalenderTry/AdminFifthComp/PastAttandence/PastAttandenceCompFifthSemAdmin';
+import PastAttandenceCompSixthSemAdmin from '../AdminPage/CalenderTry/AdminSixthComp/PastAttandence/PastAttandenceCompSixthSemAdmin';
+import FindAttendanceCompFirstSemAdmin from '../AdminPage/CalenderTry/AdminFirstComp/PastAttandence/FindAttendenceCompFirstSemAdmin';
+import FindAttendanceCompSecondSemAdmin from '../AdminPage/CalenderTry/AdminSecondComp/PastAttandence/FindAttendenceCompSecondSemAdmin';
+import FindAttendanceCompThirdSemAdmin from '../AdminPage/CalenderTry/AdminThirdComp/PastAttandence/FindAttendenceCompThirdSemAdmin';
+import FindAttendanceCompFourthSemAdmin from '../AdminPage/CalenderTry/AdminFourthComp/PastAttandence/FindAttendenceCompFourthSemAdmin';
+import FindAttendanceCompFifthSemAdmin from '../AdminPage/CalenderTry/AdminFifthComp/PastAttandence/FindAttendenceCompFifthSemAdmin';
+import FindAttendanceCompSixthSemAdmin from '../AdminPage/CalenderTry/AdminSixthComp/PastAttandence/FindAttendenceCompSixthSemAdmin';
 
 
 const Drawer = createDrawerNavigator();
@@ -184,7 +196,7 @@ const MainNavigator = () => {
   }, []);
   return (
     <View style={{ flex: 1 }}>
-      <Stack.Navigator>
+      <Stack.Navigator >
         
         {isLoading ? <Stack.Screen
           name="Splash"
@@ -195,7 +207,7 @@ const MainNavigator = () => {
       
         {/*These are used for LOGIN */}
         <Stack.Screen name='Login' component={Login} options={{ headerStyle: { backgroundColor: '#FFFFFF' } ,headerTitle:'Chhotu Ram Polytechnic',headerTintColor:'black',headerTitleAlign:'center'}} />
-        <Stack.Screen name='Create an Account' component={Create} options={{ headerStyle: { backgroundColor: 'lavender' } }} />
+        <Stack.Screen name='Create an Account' component={Create} options={{ headerStyle: { backgroundColor: '#FFFFFF' } }} />
         <Stack.Screen name='Forget Password' component={Forget} options={{ headerStyle: { backgroundColor: 'lavender' } }} />
         <Stack.Screen name='MainDrawer' component={MainDrawer} options={{ headerShown: false, headerStyle: { backgroundColor: 'lavender' } }} />
         <Stack.Screen name="Admin Page" component={AdminNav} options={{ headerShown: false }} />
@@ -282,8 +294,8 @@ const MainNavigator = () => {
         <Stack.Screen name='Computer 5th Sem' component={FindAttendanceComputerFifth} options={{ headerStyle: { backgroundColor: 'white' } }} />
         <Stack.Screen name='Computer 6th Sem' component={FindAttendanceComputerSixth} options={{ headerStyle: { backgroundColor: 'white' } }} />
 
-        <Stack.Screen name='Attendence Computer 6th' component={AttendanceSecondPage} options={{ headerStyle: { backgroundColor: '#c8b1ff' },headerTintColor:'white' }} />
-        <Stack.Screen name='Todays Attendance' component={Attendence} options={{ headerStyle: { backgroundColor: '#c8b1ff' },headerTintColor:'white' }} />
+        <Stack.Screen name='Attendence Computer 6th' component={AttendanceSecondPage} options={{ headerStyle: { backgroundColor: 'white' },headerTintColor:'black' }} />
+        <Stack.Screen name='Todays Attendance' component={Attendence} options={{ headerStyle: { backgroundColor: 'white' },headerTintColor:'black' }} />
         
         <Stack.Screen name='First Period Attandence' component={StudentFirstAttandence} options={{ headerStyle: { backgroundColor: 'white' } }} />
         <Stack.Screen name='Second Period Attandence' component={StudentSecondAttandence} options={{ headerStyle: { backgroundColor: 'white' } }} />
@@ -293,8 +305,8 @@ const MainNavigator = () => {
         <Stack.Screen name='Sixth Period Attandence' component={StudentSixthAttandence} options={{ headerStyle: { backgroundColor: 'white' } }} />
         
         
-        <Stack.Screen name='Past Attandence' component={PastAttandnce} options={{ headerStyle: { backgroundColor: '#c8b1ff' } ,headerTintColor:'white'}} />
-        <Stack.Screen name='Find Attandence' component={FindAttendence} options={{ headerStyle: { backgroundColor: '#c8b1ff' } ,headerTintColor:'white'}} />
+        <Stack.Screen name='Past Attandence' component={PastAttandnce} options={{ headerStyle: { backgroundColor: 'white' } ,headerTintColor:'black'}} />
+        <Stack.Screen name='Find Attandence' component={FindAttendence} options={{ headerStyle: { backgroundColor: 'white' } ,headerTintColor:'black'}} />
       
         <Stack.Screen name = "Computer Branch Question Paper" component={ComputerQues} />
         <Stack.Screen name = "Civil Branch Question Paper" component={CivilQues} />
@@ -373,6 +385,21 @@ const MainNavigator = () => {
         <Stack.Screen name = "4th Sem Past Attandence" component={PastAttandenceCompFourthSem}/>
         <Stack.Screen name = "5th Sem Past Attandence" component={PastAttandenceCompFifthSem}/>
         <Stack.Screen name = "6th Sem Past Attandence" component={PastAttandenceCompSixthSem}/>
+      
+        {/* this is peroid wise past attentendce screen*/}
+        <Stack.Screen name = "1st Sem Past Attandence Admin" component={PastAttandenceCompFirstSemAdmin}/>
+        <Stack.Screen name = "2nd Sem Past Attandence Admin" component={PastAttandenceCompSecondSemAdmin}/>
+        <Stack.Screen name = "3rd Sem Past Attandence Admin" component={PastAttandenceCompThirdSemAdmin}/>
+        <Stack.Screen name = "4th Sem Past Attandence Admin" component={PastAttandenceCompFourthSemAdmin}/>
+        <Stack.Screen name = "5th Sem Past Attandence Admin" component={PastAttandenceCompFifthSemAdmin}/>
+        <Stack.Screen name = "6th Sem Past Attandence Admin" component={PastAttandenceCompSixthSemAdmin}/>
+         {/* this is peroid wise find attentendce screen*/}
+         <Stack.Screen name = "1st Sem Find Attandence Admin" component={FindAttendanceCompFirstSemAdmin}/>
+        <Stack.Screen name = "2nd Sem Find Attandence Admin" component={FindAttendanceCompSecondSemAdmin}/>
+        <Stack.Screen name = "3rd Sem Find Attandence Admin" component={FindAttendanceCompThirdSemAdmin}/>
+        <Stack.Screen name = "4th Sem Find Attandence Admin" component={FindAttendanceCompFourthSemAdmin}/>
+        <Stack.Screen name = "5th Sem Find Attandence Admin" component={FindAttendanceCompFifthSemAdmin}/>
+        <Stack.Screen name = "6th Sem Find Attandence Admin" component={FindAttendanceCompSixthSemAdmin}/>
       </Stack.Navigator>
     </View>
   );

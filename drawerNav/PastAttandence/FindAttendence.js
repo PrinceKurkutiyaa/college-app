@@ -211,11 +211,11 @@ const FindAttendance = ({ route }) => {
         }
     }
     return (
-        <ScrollView>
-            <LinearGradient colors={['#c8b1ff', '#8e49ff', '#6518bf']}>
+        <ScrollView style={{flex:1}}>
+            <LinearGradient colors={['#FFFFFF', '#f6f6f6']} style={{flex:1}}>
             <View style={{ justifyContent: 'center', alignItems: 'center', paddingBottom: 30 }}>
-                <Text style={{ fontSize: 30, fontWeight: '900', paddingBottom: 10,color:'white' }}>Computer 6th Semester</Text>
-                <Text style={{ fontSize: 20, fontWeight: '500',color:'white' }}>
+                <Text style={{ fontSize: 30, fontWeight: '900', paddingBottom: 10,color:'black' }}>Computer 6th Semester</Text>
+                <Text style={{ fontSize: 20, fontWeight: '500',color:'black' }}>
                     Selected Date: {selectedDate}
                 </Text>
             </View>
@@ -224,7 +224,7 @@ const FindAttendance = ({ route }) => {
                     <View style={{ backgroundColor: 'lightgreen', padding: 10, borderRadius: 60 }}>
 
                     </View>
-                    <Text style={{color:'white',paddingHorizontal:5}}>
+                    <Text style={{color:'black',paddingHorizontal:5}}>
                         Present
                     </Text>
                 </View>
@@ -232,7 +232,7 @@ const FindAttendance = ({ route }) => {
                     <View style={{ justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20, flexDirection: 'row' }}>
                         <View style={{ backgroundColor: 'red', padding: 10, borderRadius: 60 }}>
                         </View>
-                        <Text style={{color:'white',paddingHorizontal:5}}>
+                        <Text style={{color:'black',paddingHorizontal:5}}>
                             Absent
                         </Text>
                     </View>
@@ -247,7 +247,7 @@ const FindAttendance = ({ route }) => {
             <View style={{ flexDirection: 'row' }}>
                 <View>
                     <View style={{ alignItems: 'center', borderWidth: 1, marginLeft: 5 }}>
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white'}}>Students</Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black'}}>Students</Text>
                     </View>
                     <FlatList
                         data={peroidData}
@@ -265,11 +265,11 @@ const FindAttendance = ({ route }) => {
                                 <View style={{ flexDirection: 'row' }}>
 
                                     <View style={{ justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 17, color: 'white' }}>{index + 1}.</Text>
+                                        <Text style={{ fontSize: 17, color: 'black' }}>{index + 1}.</Text>
                                     </View>
                                     <View style={{ paddingHorizontal: 10 }}>
-                                        <Text style={{ fontSize: 15, color: 'white' }}>Name: {item.name}</Text>
-                                        <Text style={{ fontSize: 15, color: 'white' }}>Roll: {item.roll}</Text>
+                                        <Text style={{ fontSize: 15, color: 'black' }}>Name: {item.name}</Text>
+                                        <Text style={{ fontSize: 15, color: 'black' }}>Roll: {item.roll}</Text>
                                     </View>
 
 
@@ -280,7 +280,7 @@ const FindAttendance = ({ route }) => {
                 <View style={{flexDirection:'row'}}>
     
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 1 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 1 </Text>
                         <FlatList
                             data={peroid1}
                             keyExtractor={(item) => item.id}
@@ -299,7 +299,7 @@ const FindAttendance = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 2 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 2 </Text>
                         <FlatList
                             data={peroid2}
                             keyExtractor={(item) => item.id}
@@ -318,7 +318,7 @@ const FindAttendance = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 3 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 3 </Text>
                         <FlatList
                             data={peroid3}
                             keyExtractor={(item) => item.id}
@@ -337,7 +337,7 @@ const FindAttendance = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 4 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 4 </Text>
                         <FlatList
                             data={peroid4}
                             keyExtractor={(item) => item.id}
@@ -356,7 +356,7 @@ const FindAttendance = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 5 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 5 </Text>
                         <FlatList
                             data={peroid5}
                             keyExtractor={(item) => item.id}
@@ -375,7 +375,7 @@ const FindAttendance = ({ route }) => {
                         />
                     </View>
                     <View style={{ borderWidth: 1 }} >
-                        <Text style={{ fontWeight: '700', fontSize: 20,color:'white' }}> 6 </Text>
+                        <Text style={{ fontWeight: '700', fontSize: 20,color:'black' }}> 6 </Text>
                         <FlatList
                             data={peroid6}
                             keyExtractor={(item) => item.id}

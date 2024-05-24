@@ -1,4 +1,4 @@
-import { Button, FlatList, Text, TouchableOpacity, View } from "react-native";
+import { Alert, Button, FlatList, Text, TouchableOpacity, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import firestore from '@react-native-firebase/firestore';
 
@@ -73,12 +73,12 @@ const ThirdPeroidSecond = () => {
                       boolean: boolean,
                       roll: roll
                     });
-                    console.log(`Attendance added successfully for document with ID: ${computerDocId}`);
+                    
                   } catch (error) {
                     console.error('Error adding attendance:', error);
                   }
                 });
-                console.warn('Data Added in DB')
+                Alert.alert(`Data Added!`,"Your data has been Added successfully!!");
         
               } catch (error) {
                 console.warn(error);
@@ -97,7 +97,7 @@ const ThirdPeroidSecond = () => {
             </View>
             <View style={{ alignItems: 'center', margin: 10, flexDirection: 'row', justifyContent: 'center' }}>
                 <Text style={{ paddingHorizontal: 20 }}>
-                    Semester: 6th
+                    Semester: 2nd
                 </Text>
                 <Text style={{ paddingHorizontal: 20 }}>
                     Date: {dateString}

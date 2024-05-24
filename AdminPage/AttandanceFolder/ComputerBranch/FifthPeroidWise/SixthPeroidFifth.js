@@ -97,7 +97,7 @@ const SixthPeroidFifth = () => {
             </View>
             <View style={{ alignItems: 'center', margin: 10, flexDirection: 'row', justifyContent: 'center' }}>
                 <Text style={{ paddingHorizontal: 20 }}>
-                    Semester: 6th (Peroid :6)
+                    Semester: 5th (Peroid :6)
                 </Text>
                 <Text style={{ paddingHorizontal: 20 }}>
                     Date: {dateString}

@@ -9,9 +9,12 @@ import CustomDrawer from './CustomDrawer';
 import Marksheet from './Marksheet';
 import Course from './Course';
 import Icon from 'react-native-vector-icons/FontAwesome'
+import Icons from 'react-native-vector-icons/MaterialIcons'
 import AttendanceFirstPage from './AttendenceFirstPage';
 import QuestionPaper from './QuestionPaper';
 import { View } from 'react-native';
+import PayFeeDrawer from './PayFeeDrawer';
+import SessionalMarks from './SessionalMarks';
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -25,7 +28,7 @@ const MainDrawer = () => {
         drawerActiveBackgroundColor: 'tansparent',
         drawerInactiveBackgroundColor: 'transparent',
         drawerActiveTintColor: '#00ff66',
-        drawerInactiveTintColor:'white',
+        drawerInactiveTintColor:'#383d41',
       }}
       >
 
@@ -42,9 +45,15 @@ const MainDrawer = () => {
           drawerIcon: ({ focused, color, size }) => (
             <Icon name="book" size={20} color={color} />
           ),
-          headerStyle: { backgroundColor: '#c8b1ff' },headerTintColor:'white'
+          headerStyle: { backgroundColor: '#FFFFFF' },headerTintColor:'black'
           
         }} />
+        <Drawer.Screen name="Sessional Marks" component={SessionalMarks} 
+       options={{
+        drawerIcon: ({ focused, color, size }) => (
+          <Icon name="percent" size={18} color={color} />
+        )    
+      }} />
       <Drawer.Screen name="Attendence" component={AttendanceFirstPage}
       options={{
         drawerIcon: ({ focused, color, size }) => (
@@ -57,9 +66,17 @@ const MainDrawer = () => {
       drawerIcon:({focused,color,size})=>(
         <Icon name="book" size={20} color={color} />
       ),
-      headerStyle: { backgroundColor: '#c8b1ff' },headerTintColor:'white'
+      headerStyle: { backgroundColor: '#FFFFFF' },headerTintColor:'black'
     }}
      />
+     <Drawer.Screen name="Pay Fee" component={PayFeeDrawer}
+      options={{
+       drawerIcon: ({ focused, color, size }) => (
+         <Icons name="payment" size={20} color={color} />
+       ),
+       headerStyle: { backgroundColor: '#FFFFFF' },headerTintColor:'black',
+     }}
+      />
       <Drawer.Screen name="Marksheet" component={Marksheet} 
        options={{
         drawerIcon: ({ focused, color, size }) => (
@@ -71,9 +88,10 @@ const MainDrawer = () => {
        drawerIcon: ({ focused, color, size }) => (
          <Icon name="gamepad" size={20} color={color} />
        ),
-       headerStyle: { backgroundColor: '#c8b1ff' },headerTintColor:'white',
+       headerStyle: { backgroundColor: '#FFFFFF' },headerTintColor:'black',
      }}
       />
+       
     </Drawer.Navigator>
 
 

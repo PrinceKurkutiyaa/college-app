@@ -8,7 +8,7 @@ import LinearGradient from 'react-native-linear-gradient';
 const HomeDrawer = () => {
   return (
     <ScrollView style={{ flex: 1 }}>
-      <LinearGradient colors={['#FFFFFF', '#7c7c7c', '#000000']}>
+      <LinearGradient colors={['#FFFFFF', '#f6f6f6']}>
       <View style={{
             justifyContent: 'center',
             alignItems: 'center',
@@ -22,7 +22,7 @@ const HomeDrawer = () => {
         
         <View>
           <View>
-            <Text style={{ fontSize: 25, fontWeight: '900', paddingVertical: 20, color: 'white', paddingHorizontal: 10 }}>
+            <Text style={{ fontSize: 25, fontWeight: '900', paddingVertical: 20, color: '#383d41', paddingHorizontal: 10 }}>
               Our Courses
             </Text>
           </View>
@@ -46,33 +46,33 @@ const HomeDrawer = () => {
 
             <View style={{ paddingHorizontal: 20, alignItems: 'center' }}>
               <Image source={require("../collegeData//ComputerData.jpg")} style={{ height: 200, width: 200, borderRadius: 50 }} />
-              <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>Computer Engineering</Text>
+              <Text style={{ color: '#383d41', fontSize: 15, fontWeight: 'bold' }}>Computer Engineering</Text>
             </View>
             <View style={{ paddingHorizontal: 20, alignItems: 'center' }}>
               <Image source={require("../collegeData//ComputerData.jpg")} style={{ height: 200, width: 200, borderRadius: 50 }} />
-              <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>Civil Engineering</Text>
+              <Text style={{ color: '#383d41', fontSize: 15, fontWeight: 'bold' }}>Civil Engineering</Text>
             </View>
             <View style={{ paddingHorizontal: 20, alignItems: 'center' }}>
               <Image source={require("../collegeData//ComputerData.jpg")} style={{ height: 200, width: 200, borderRadius: 50 }} />
-              <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>Mechanical Engineering</Text>
+              <Text style={{ color: '#383d41', fontSize: 15, fontWeight: 'bold' }}>Mechanical Engineering</Text>
             </View>
             <View style={{ paddingHorizontal: 20, alignItems: 'center' }}>
               <Image source={require("../collegeData//ComputerData.jpg")} style={{ height: 200, width: 200, borderRadius: 50 }} />
-              <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>Electrical Engineering</Text>
+              <Text style={{ color: '#383d41', fontSize: 15, fontWeight: 'bold' }}>Electrical Engineering</Text>
             </View>
             <View style={{ paddingHorizontal: 20, alignItems: 'center' }}>
               <Image source={require("../collegeData//ComputerData.jpg")} style={{ height: 200, width: 200, borderRadius: 50 }} />
-              <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>Electronics & Comm. Engg</Text>
+              <Text style={{ color: '#383d41', fontSize: 15, fontWeight: 'bold' }}>Electronics & Comm. Engg</Text>
             </View>
             <View style={{ paddingHorizontal: 20, alignItems: 'center' }}>
               <Image source={require("../collegeData//ComputerData.jpg")} style={{ height: 200, width: 200, borderRadius: 50 }} />
-              <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>Plastic Engineering</Text>
+              <Text style={{ color: '#383d41', fontSize: 15, fontWeight: 'bold' }}>Plastic Engineering</Text>
             </View>
           </ScrollView>
 
         </View>
         <View >
-        <Text style={{ fontSize: 25, fontWeight: '900', paddingVertical: 20, color: 'white', paddingHorizontal: 10 }}>
+        <Text style={{ fontSize: 25, fontWeight: '900', paddingVertical: 20, color: '#383d41', paddingHorizontal: 10 }}>
               Our Principal
             </Text>
 
@@ -82,7 +82,7 @@ const HomeDrawer = () => {
           </View>
         </View>
         <View style={{paddingBottom:30}}>
-        <Text style={{ fontSize: 25, fontWeight: '900', paddingVertical: 20, color: 'white', paddingHorizontal: 10 }}>
+        <Text style={{ fontSize: 25, fontWeight: '900', paddingVertical: 20, color: '#383d41', paddingHorizontal: 10 }}>
               Glimpses
             </Text>
         <Swiper style={{ justifyContent: 'center', alignItems: 'center', height: 210}}
@@ -90,7 +90,7 @@ const HomeDrawer = () => {
           autoplayTimeout={5}
           
           dotColor='white'
-          activeDotColor='#6518bf'
+          activeDotColor='#383d41'
         >
           <View style={{
             justifyContent: 'center',
@@ -129,7 +129,7 @@ const HomeDrawer = () => {
           flex: 2, justifyContent: 'flex-end', borderWidth: 1,
           borderRadius: 8,
           borderColor: '#CCCCCC',
-          padding: 10, backgroundColor: '#8e49ff'
+          padding: 10, backgroundColor: '#383d41'
         }}>
           <Text style={{ fontSize: 17, fontWeight: '900', paddingBottom: 10, color: 'white' }}>
             ABOUT C.R POLYTECHNIC

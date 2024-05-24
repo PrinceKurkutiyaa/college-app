@@ -10,9 +10,9 @@ const Drawer = createDrawerNavigator();
 const AboutDrawer = () =>{
     return(
     
-        <LinearGradient colors={['#c8b1ff', '#8e49ff', '#6518bf']} style={{ flex: 1, alignItems: 'center', justifyContent: 'center',flexDirection:'row' }}>
-         <Text style={{color:'white'}}>This app is currently developing by</Text>
-         <Text style={{fontWeight:'bold',color:'white'}}> PRINCE</Text>
+        <LinearGradient colors={['#FFFFFF', '#f6f6f6']} style={{ flex: 1, alignItems: 'center', justifyContent: 'center',flexDirection:'row' }}>
+         <Text style={{color:'black',fontSize:11,paddingBottom:3,fontFamily:'monospace',letterSpacing:1,}}>This app is currently developing by</Text>
+         <Text style={{color:'black',fontSize:12,paddingBottom:3,fontFamily:'monospace',letterSpacing:1,fontWeight:'900'}}> PRINCE</Text>
          </LinearGradient>
     
     )

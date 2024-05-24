@@ -123,7 +123,8 @@ dependencies {
     implementation("com.facebook.react:flipper-integration")
     
     // new added by prince
-    implementation platform('com.google.firebase:firebase-bom:32.7.4')
+    implementation platform('com.google.firebase:firebase-bom:33.0.0')
+    //implementation platform('com.google.firebase:firebase-bom:32.7.4') this is prevoius (princethakurBRo)
     implementation("com.google.firebase:firebase-auth")
     implementation 'com.google.firebase:firebase-messaging'
   //new added by prince

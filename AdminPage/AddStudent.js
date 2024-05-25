@@ -38,6 +38,141 @@ const AddStudent = () => {
                 navigation.navigate('Student Data')
             }
         }
+       else if(selectedBranch === "Electronics"){
+        if (selcetedSemester == 1) {
+            console.warn("1st sem")
+            navigation.navigate('1st Sem Electronics')
+        }
+        else if (selcetedSemester == 2) {
+            console.warn("2nd sem")
+            navigation.navigate('2nd Sem Electronics')
+        }
+        else if (selcetedSemester == 3) {
+            console.warn("3rd sem")
+            navigation.navigate('3rd Sem Electronics')
+        }
+        else if (selcetedSemester == 4) {
+            console.warn("4th sem")
+            navigation.navigate('4th Sem Electronics')
+        }
+        else if (selcetedSemester == 5) {
+            console.warn("5th sem")
+            navigation.navigate('5th Sem Electronics')
+        }
+        else if (selcetedSemester == 6) {
+            console.warn("workin")
+            navigation.navigate('6th Sem Electronics')
+        }
+
+       } 
+       else if(selectedBranch === "Plastic"){
+        if (selcetedSemester == 1) {
+            console.warn("1st sem")
+            navigation.navigate('1st Sem Plastic')
+        }
+        else if (selcetedSemester == 2) {
+            console.warn("2nd sem")
+            navigation.navigate('2nd Sem Plastic')
+        }
+        else if (selcetedSemester == 3) {
+            console.warn("3rd sem")
+            navigation.navigate('3rd Sem Plastic')
+        }
+        else if (selcetedSemester == 4) {
+            console.warn("4th sem")
+            navigation.navigate('4th Sem Plastic')
+        }
+        else if (selcetedSemester == 5) {
+            console.warn("5th sem")
+            navigation.navigate('5th Sem Plastic')
+        }
+        else if (selcetedSemester == 6) {
+            console.warn("workin")
+            navigation.navigate('6th Sem Plastic')
+        }
+
+       } 
+       else if(selectedBranch === "Mechanical"){
+        if (selcetedSemester == 1) {
+            console.warn("1st sem")
+            navigation.navigate('1st Sem Mechanical')
+        }
+        else if (selcetedSemester == 2) {
+            console.warn("2nd sem")
+            navigation.navigate('2nd Sem Mechanical')
+        }
+        else if (selcetedSemester == 3) {
+            console.warn("3rd sem")
+            navigation.navigate('3rd Sem Mechanical')
+        }
+        else if (selcetedSemester == 4) {
+            console.warn("4th sem")
+            navigation.navigate('4th Sem Mechanical')
+        }
+        else if (selcetedSemester == 5) {
+            console.warn("5th sem")
+            navigation.navigate('5th Sem Mechanical')
+        }
+        else if (selcetedSemester == 6) {
+            console.warn("workin")
+            navigation.navigate('6th Sem Mechanical')
+        }
+
+       } 
+       else if(selectedBranch === "Electrical"){
+        if (selcetedSemester == 1) {
+            console.warn("1st sem")
+            navigation.navigate('1st Sem Electrical')
+        }
+        else if (selcetedSemester == 2) {
+            console.warn("2nd sem")
+            navigation.navigate('2nd Sem Electrical')
+        }
+        else if (selcetedSemester == 3) {
+            console.warn("3rd sem")
+            navigation.navigate('3rd Sem Electrical')
+        }
+        else if (selcetedSemester == 4) {
+            console.warn("4th sem")
+            navigation.navigate('4th Sem Electrical')
+        }
+        else if (selcetedSemester == 5) {
+            console.warn("5th sem")
+            navigation.navigate('5th Sem Electrical')
+        }
+        else if (selcetedSemester == 6) {
+            console.warn("workin")
+            navigation.navigate('6th Sem Electrical')
+        }
+
+       } 
+       else if(selectedBranch === "Civil"){
+        if (selcetedSemester == 1) {
+            console.warn("1st sem")
+            navigation.navigate('1st Sem Civil')
+        }
+        else if (selcetedSemester == 2) {
+            console.warn("2nd sem")
+            navigation.navigate('2nd Sem Civil')
+        }
+        else if (selcetedSemester == 3) {
+            console.warn("3rd sem")
+            navigation.navigate('3rd Sem Civil')
+        }
+        else if (selcetedSemester == 4) {
+            console.warn("4th sem")
+            navigation.navigate('4th Sem Civil')
+        }
+        else if (selcetedSemester == 5) {
+            console.warn("5th sem")
+            navigation.navigate('5th Sem Civil')
+        }
+        else if (selcetedSemester == 6) {
+            console.warn("workin")
+            navigation.navigate('6th Sem Civil')
+        }
+
+       }
         else {
             console.warn('Not Wokring MF')
         }
@@ -61,6 +196,7 @@ const AddStudent = () => {
                         <Picker.Item label="Electrical" value="Electrical" />
                         <Picker.Item label="Mechanical" value="Mechanical" />
                         <Picker.Item label="Plastic" value="Plastic" />
+                        <Picker.Item label="Civil" value="Civil" />
                     </Picker>
                 </View>
             </View>

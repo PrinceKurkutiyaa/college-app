@@ -210,6 +210,34 @@ const FindAttendanceCompFourthSemAdmin= ({ route }) => {
             console.log(error)
         }
     }
+    const exportToExcel = async () => {
+        const wb = XLSX.utils.book_new();
+        const data = [
+            ['Name', 'Roll', 'Period 1', 'Period 2', 'Period 3', 'Period 4', 'Period 5', 'Period 6'],
+            ...peroidData.map((item, index) => [
+                item.name,
+                item.roll,
+                peroid1[index]?.boolean ? 'P' : 'A',
+                peroid2[index]?.boolean ? 'P' : 'A',
+                peroid3[index]?.boolean ? 'P' : 'A',
+                peroid4[index]?.boolean ? 'P' : 'A',
+                peroid5[index]?.boolean ? 'P' : 'A',
+                peroid6[index]?.boolean ? 'P' : 'A'
+            ])
+        ];
+        const ws = XLSX.utils.aoa_to_sheet(data);
+        XLSX.utils.book_append_sheet(wb, ws, 'Attendance');
+        const wbout = XLSX.write(wb, { type: 'binary', bookType: 'xlsx' });
+
+        const path = `${RNFS.DownloadDirectoryPath}/attendance_5th_Sem ${selectedDate}.xlsx`;
+        await RNFS.writeFile(path, wbout, 'ascii')
+            .then(() => {
+                Alert.alert('Excel file written at ',`${path}`);
+            })
+            .catch((error) => {
+                console.error("Error writing file: ", error);
+            });
+    };
     return (
         <ScrollView>
             <LinearGradient colors={['#c8b1ff', '#8e49ff', '#6518bf']}>
@@ -244,6 +272,19 @@ const FindAttendanceCompFourthSemAdmin= ({ route }) => {
                     <Text style={{fontWeight:'900'}} >Peroid 1</Text>
                 </View>
             </View> */}
+            <View style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+          <TouchableOpacity onPress={exportToExcel}>
+            <View style={{flexDirection: 'row'}}>
+              <Icon
+                name="download"
+                style={{
+                  fontSize: 40,
+                  color: 'black',
+                  paddingHorizontal: 20,
+                }}></Icon>
+            </View>
+          </TouchableOpacity>
+        </View>
             <View style={{ flexDirection: 'row' }}>
                 <View>
                     <View style={{ alignItems: 'center', borderWidth: 1, marginLeft: 5 }}>

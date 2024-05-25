@@ -12,7 +12,7 @@ const FifthPeroidSecond = () => {
     const [bool, setBool] = useState(false)
 
     const today = new Date();
-    const day = (today.getDay()-2).toString().padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
     const month = (today.getMonth() + 1).toString().padStart(2, '0');
     const year = today.getFullYear();
     const dateString = `${year}-${month}-${day}`;

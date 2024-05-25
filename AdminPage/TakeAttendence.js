@@ -14,7 +14,6 @@ const TakeAttendence = () => {
 
         if (selcetedSemester == 1 && selectedBranch === "Computer") {
             //console.warn("FIRST COMPUTRER")
-
             if (peroid == 1) {
                 navigation.navigate('First Peroid First')
             }
@@ -148,6 +147,645 @@ const TakeAttendence = () => {
             }
 
         }
+        else if (selcetedSemester == 1 && selectedBranch === "Electrical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid First Electrical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid First Electrical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid First Electrical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid First Electrical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid First Electrical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid First Electrical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 2 && selectedBranch === "Electrical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Second Electrical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Second Electrical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Second Electrical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Second Electrical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Second Electrical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Second Electrical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 3 && selectedBranch === "Electrical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Third Electrical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Third Electrical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Third Electrical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Third Electrical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Third Electrical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Third Electrical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 4 && selectedBranch === "Electrical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fourth Electrical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fourth Electrical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fourth Electrical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fourth Electrical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fourth Electrical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fourth Electrical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+
+        else if (selcetedSemester == 5 && selectedBranch === "Electrical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fifth Electrical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fifth Electrical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fifth Electrical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fifth Electrical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fifth Electrical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fifth Electrical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        } 
+        else if (selcetedSemester == 6 && selectedBranch === "Electrical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Sixth Electrical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Sixth Electrical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Sixth Electrical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Sixth Electrical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Sixth Electrical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Sixth Electrical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        } 
+
+        else if (selcetedSemester == 1 && selectedBranch === "Plastic") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid First Plastic')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid First Plastic')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid First Plastic')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid First Plastic')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid First Plastic')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid First Plastic')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 2 && selectedBranch === "Plastic") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Second Plastic')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Second Plastic')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Second Plastic')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Second Plastic')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Second Plastic')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Second Plastic')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 3 && selectedBranch === "Plastic") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Third Plastic')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Third Plastic')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Third Plastic')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Third Plastic')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Third Plastic')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Third Plastic')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 4 && selectedBranch === "Plastic") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fourth Plastic')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fourth Plastic')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fourth Plastic')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fourth Plastic')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fourth Plastic')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fourth Plastic')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+
+        else if (selcetedSemester == 5 && selectedBranch === "Plastic") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fifth Plastic')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fifth Plastic')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fifth Plastic')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fifth Plastic')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fifth Plastic')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fifth Plastic')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        } 
+        else if (selcetedSemester == 6 && selectedBranch === "Plastic") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Sixth Plastic')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Sixth Plastic')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Sixth Plastic')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Sixth Plastic')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Sixth Plastic')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Sixth Plastic')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+
+        else if (selcetedSemester == 1 && selectedBranch === "Civil") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid First Civil')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid First Civil')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid First Civil')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid First Civil')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid First Civil')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid First Civil')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 2 && selectedBranch === "Civil") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Second Civil')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Second Civil')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Second Civil')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Second Civil')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Second Civil')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Second Civil')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 3 && selectedBranch === "Civil") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Third Civil')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Third Civil')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Third Civil')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Third Civil')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Third Civil')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Third Civil')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 4 && selectedBranch === "Civil") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fourth Civil')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fourth Civil')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fourth Civil')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fourth Civil')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fourth Civil')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fourth Civil')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+
+        else if (selcetedSemester == 5 && selectedBranch === "Civil") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fifth Civil')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fifth Civil')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fifth Civil')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fifth Civil')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fifth Civil')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fifth Civil')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        } 
+        else if (selcetedSemester == 6 && selectedBranch === "Civil") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Sixth Civil')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Sixth Civil')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Sixth Civil')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Sixth Civil')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Sixth Civil')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Sixth Civil')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+
+
+        else if (selcetedSemester == 1 && selectedBranch === "Electronics") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid First Electronics')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid First Electronics')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid First Electronics')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid First Electronics')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid First Electronics')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid First Electronics')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 2 && selectedBranch === "Electronics") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Second Electronics')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Second Electronics')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Second Electronics')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Second Electronics')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Second Electronics')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Second Electronics')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 3 && selectedBranch === "Electronics") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Third Electronics')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Third Electronics')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Third Electronics')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Third Electronics')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Third Electronics')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Third Electronics')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 4 && selectedBranch === "Electronics") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fourth Electronics')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fourth Electronics')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fourth Electronics')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fourth Electronics')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fourth Electronics')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fourth Electronics')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+
+        else if (selcetedSemester == 5 && selectedBranch === "Electronics") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fifth Electronics')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fifth Electronics')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fifth Electronics')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fifth Electronics')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fifth Electronics')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fifth Electronics')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        } 
+        else if (selcetedSemester == 6 && selectedBranch === "Electronics") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Sixth Electronics')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Sixth Electronics')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Sixth Electronics')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Sixth Electronics')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Sixth Electronics')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Sixth Electronics')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        } 
+        else if (selcetedSemester == 1 && selectedBranch === "Mechanical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid First Mechanical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid First Mechanical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid First Mechanical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid First Mechanical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid First Mechanical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid First Mechanical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 2 && selectedBranch === "Mechanical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Second Mechanical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Second Mechanical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Second Mechanical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Second Mechanical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Second Mechanical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Second Mechanical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 3 && selectedBranch === "Mechanical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Third Mechanical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Third Mechanical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Third Mechanical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Third Mechanical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Third Mechanical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Third Mechanical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+        else if (selcetedSemester == 4 && selectedBranch === "Mechanical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fourth Mechanical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fourth Mechanical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fourth Mechanical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fourth Mechanical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fourth Mechanical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fourth Mechanical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        }
+
+        else if (selcetedSemester == 5 && selectedBranch === "Mechanical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Fifth Mechanical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Fifth Mechanical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Fifth Mechanical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Fifth Mechanical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Fifth Mechanical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Fifth Mechanical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        } 
+        else if (selcetedSemester == 6 && selectedBranch === "Mechanical") {    
+            if (peroid == 1) {
+                navigation.navigate('First Peroid Sixth Mechanical')
+            }
+            else if (peroid == 2) {
+                navigation.navigate('Second Peroid Sixth Mechanical')
+            }
+            else if (peroid == 3) {
+                navigation.navigate('Third Peroid Sixth Mechanical')
+            }
+            else if (peroid == 4) {
+                navigation.navigate('Fourth Peroid Sixth Mechanical')
+            } else if (peroid == 5) {
+                navigation.navigate('Fifth Peroid Sixth Mechanical')
+            } else if (peroid == 6) {
+                navigation.navigate('Sixth Peroid Sixth Mechanical')
+            } else if (peroid == 7) {
+                console.warn('7th')
+            }
+
+        } 
         else {
             console.warn('Not Wokring MF')
         }
@@ -169,6 +807,7 @@ const TakeAttendence = () => {
                         <Picker.Item label="Electrical" value="Electrical" />
                         <Picker.Item label="Mechanical" value="Mechanical" />
                         <Picker.Item label="Plastic" value="Plastic" />
+                        <Picker.Item label="Civil" value="Civil" />
                     </Picker>
                 </View>
             </View>

@@ -38,6 +38,136 @@ const CalenderTry = () => {
                 navigation.navigate('6th Sem Past Attandence Admin')
             }
         }
+        else if (selectedBranch === "Civil") {
+            if (selcetedSemester == 1) {
+                console.warn("1st sem")
+                navigation.navigate('1st Sem Past Attandence Civil')
+            }
+            else if (selcetedSemester == 2) {
+                console.warn("2nd sem")
+                navigation.navigate('2nd Sem Past Attandence Civil')
+            }
+            else if (selcetedSemester == 3) {
+                console.warn("3rd sem")
+                navigation.navigate('3rd Sem Past Attandence Civil')
+            }
+            else if (selcetedSemester == 4) {
+                console.warn("4th sem")
+                navigation.navigate('4th Sem Past Attandence Civil')
+            }
+            else if (selcetedSemester == 5) {
+                console.warn("5th sem")
+                navigation.navigate('5th Sem Past Attandence Civil')
+            }
+            else if (selcetedSemester == 6) {
+                console.warn("workin")
+                navigation.navigate('6th Sem Past Attandence Civil')
+            }
+        }
+        else if (selectedBranch === "Mechanical") {
+            if (selcetedSemester == 1) {
+                console.warn("1st sem")
+                navigation.navigate('1st Sem Past Attandence Mechanical')
+            }
+            else if (selcetedSemester == 2) {
+                console.warn("2nd sem")
+                navigation.navigate('2nd Sem Past Attandence Mechanical')
+            }
+            else if (selcetedSemester == 3) {
+                console.warn("3rd sem")
+                navigation.navigate('3rd Sem Past Attandence Mechanical')
+            }
+            else if (selcetedSemester == 4) {
+                console.warn("4th sem")
+                navigation.navigate('4th Sem Past Attandence Mechanical')
+            }
+            else if (selcetedSemester == 5) {
+                console.warn("5th sem")
+                navigation.navigate('5th Sem Past Attandence Mechanical')
+            }
+            else if (selcetedSemester == 6) {
+                console.warn("workin")
+                navigation.navigate('6th Sem Past Attandence Mechanical')
+            }
+        }
+        else if (selectedBranch === "Electronics") {
+            if (selcetedSemester == 1) {
+                console.warn("1st sem")
+                navigation.navigate('1st Sem Past Attandence Electronics')
+            }
+            else if (selcetedSemester == 2) {
+                console.warn("2nd sem")
+                navigation.navigate('2nd Sem Past Attandence Electronics')
+            }
+            else if (selcetedSemester == 3) {
+                console.warn("3rd sem")
+                navigation.navigate('3rd Sem Past Attandence Electronics')
+            }
+            else if (selcetedSemester == 4) {
+                console.warn("4th sem")
+                navigation.navigate('4th Sem Past Attandence Electronics')
+            }
+            else if (selcetedSemester == 5) {
+                console.warn("5th sem")
+                navigation.navigate('5th Sem Past Attandence Electronics')
+            }
+            else if (selcetedSemester == 6) {
+                console.warn("workin")
+                navigation.navigate('6th Sem Past Attandence Electronics')
+            }
+        }
+        else if (selectedBranch === "Electrical") {
+            if (selcetedSemester == 1) {
+                console.warn("1st sem")
+                navigation.navigate('1st Sem Past Attandence Electrical')
+            }
+            else if (selcetedSemester == 2) {
+                console.warn("2nd sem")
+                navigation.navigate('2nd Sem Past Attandence Electrical')
+            }
+            else if (selcetedSemester == 3) {
+                console.warn("3rd sem")
+                navigation.navigate('3rd Sem Past Attandence Electrical')
+            }
+            else if (selcetedSemester == 4) {
+                console.warn("4th sem")
+                navigation.navigate('4th Sem Past Attandence Electrical')
+            }
+            else if (selcetedSemester == 5) {
+                console.warn("5th sem")
+                navigation.navigate('5th Sem Past Attandence Electrical')
+            }
+            else if (selcetedSemester == 6) {
+                console.warn("workin")
+                navigation.navigate('6th Sem Past Attandence Electrical')
+            }
+        }
+        else if (selectedBranch === "Plastic") {
+            if (selcetedSemester == 1) {
+                console.warn("1st sem")
+                navigation.navigate('1st Sem Past Attandence Plastic')
+            }
+            else if (selcetedSemester == 2) {
+                console.warn("2nd sem")
+                navigation.navigate('2nd Sem Past Attandence Plastic')
+            }
+            else if (selcetedSemester == 3) {
+                console.warn("3rd sem")
+                navigation.navigate('3rd Sem Past Attandence Plastic')
+            }
+            else if (selcetedSemester == 4) {
+                console.warn("4th sem")
+                navigation.navigate('4th Sem Past Attandence Plastic')
+            }
+            else if (selcetedSemester == 5) {
+                console.warn("5th sem")
+                navigation.navigate('5th Sem Past Attandence Plastic')
+            }
+            else if (selcetedSemester == 6) {
+                console.warn("workin")
+                navigation.navigate('6th Sem Past Attandence Plastic')
+            }
+        }
         else {
             console.warn('Not Wokring MF')
         }
@@ -60,6 +190,7 @@ const CalenderTry = () => {
                         <Picker.Item label="Electrical" value="Electrical" />
                         <Picker.Item label="Mechanical" value="Mechanical" />
                         <Picker.Item label="Plastic" value="Plastic" />
+                        <Picker.Item label="Civil" value="Civil" />
                     </Picker>
                 </View>
             </View>

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, FlatList, SectionList, ScrollView } from "react-native";
+import { View, Text, FlatList, SectionList, ScrollView,TouchableOpacity ,Alert} from "react-native";
 import firestore from '@react-native-firebase/firestore';
-import PastAttandence from "./PastAttandenceCompThirdSemAdmin";
-import LinearGradient from "react-native-linear-gradient";
 
+import LinearGradient from "react-native-linear-gradient";
+import Icon from 'react-native-vector-icons/Foundation';
+import XLSX from 'xlsx';
+import RNFS from 'react-native-fs';
 const FindAttendanceElectronicsThirdSemAdmin = ({ route }) => {
     const [computer6thSemData, setComputer6thSemData] = useState([]);
     const [idData, setIDData] = useState([])

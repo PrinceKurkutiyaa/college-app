@@ -39,13 +39,19 @@ const AttendenceComputerTodayThird = () => {
       style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <View
         style={{
-            flexDirection: 'row',
-            borderWidth: 1,
-            borderRadius: 20,
-            padding: 20,
-            borderColor: '#00dc00',
-            shadowColor: '#00dc00', elevation: 20, shadowOpacity: 10,
-            backgroundColor:'#383d41'
+          paddingVertical: 50,
+          paddingTop: 60,
+          paddingHorizontal: 20,
+          shadowColor: '#00dc00', // Shadow color
+          shadowOffset: { width: 0, height: 2 }, // Added for iOS
+          shadowOpacity: 0.8, // Corrected for iOS, value between 0 and 1
+          shadowRadius: 10, // Added for iOS
+          elevation: 40, // For Android
+          borderWidth: 1,
+          borderColor: '#00dc00',
+          borderRadius: 10,
+          backgroundColor: '#383d41',
+          opacity: 1,
         }}>
         <View style={{paddingTop: 15, paddingHorizontal: 10}}>
           <Text style={{fontSize: 17, color: 'white'}}> Select Period :</Text>

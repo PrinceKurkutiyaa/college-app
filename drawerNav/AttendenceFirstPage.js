@@ -26,6 +26,71 @@ const AttendanceFirstPage = () => {
     } else if (selectedBranch === 'Computer' && selectedSemester == 5) {
       navigation.navigate('Attandence Computer 5th');
     }
+    else if (selectedBranch === 'Civil' && selectedSemester == 6) {
+      navigation.navigate('Attendence Civil 6th');
+    } else if (selectedBranch === 'Civil' && selectedSemester == 1) {
+      navigation.navigate('Attandence Civil 1st');
+    } else if (selectedBranch === 'Civil' && selectedSemester == 2) {
+      navigation.navigate('Attandence Civil 2nd');
+    } else if (selectedBranch === 'Civil' && selectedSemester == 3) {
+      navigation.navigate('Attandence Civil 3rd');
+    } else if (selectedBranch === 'Civil' && selectedSemester == 4) {
+      navigation.navigate('Attandence Civil 4th');
+    } else if (selectedBranch === 'Civil' && selectedSemester == 5) {
+      navigation.navigate('Attandence Civil 5th');
+    }
+    else if (selectedBranch === 'Mechanical' && selectedSemester == 6) {
+      navigation.navigate('Attendence Mechanical 6th');
+    } else if (selectedBranch === 'Mechanical' && selectedSemester == 1) {
+      navigation.navigate('Attandence Mechanical 1st');
+    } else if (selectedBranch === 'Mechanical' && selectedSemester == 2) {
+      navigation.navigate('Attandence Mechanical 2nd');
+    } else if (selectedBranch === 'Mechanical' && selectedSemester == 3) {
+      navigation.navigate('Attandence Mechanical 3rd');
+    } else if (selectedBranch === 'Mechanical' && selectedSemester == 4) {
+      navigation.navigate('Attandence Mechanical 4th');
+    } else if (selectedBranch === 'Mechanical' && selectedSemester == 5) {
+      navigation.navigate('Attandence Mechanical 5th');
+    }
+    else if (selectedBranch === 'Plastic' && selectedSemester == 6) {
+      navigation.navigate('Attendence Plastic 6th');
+    } else if (selectedBranch === 'Plastic' && selectedSemester == 1) {
+      navigation.navigate('Attandence Plastic 1st');
+    } else if (selectedBranch === 'Plastic' && selectedSemester == 2) {
+      navigation.navigate('Attandence Plastic 2nd');
+    } else if (selectedBranch === 'Plastic' && selectedSemester == 3) {
+      navigation.navigate('Attandence Plastic 3rd');
+    } else if (selectedBranch === 'Plastic' && selectedSemester == 4) {
+      navigation.navigate('Attandence Plastic 4th');
+    } else if (selectedBranch === 'Plastic' && selectedSemester == 5) {
+      navigation.navigate('Attandence Plastic 5th');
+    }
+    else if (selectedBranch === 'Electrical' && selectedSemester == 6) {
+      navigation.navigate('Attendence Electrical 6th');
+    } else if (selectedBranch === 'Electrical' && selectedSemester == 1) {
+      navigation.navigate('Attandence Electrical 1st');
+    } else if (selectedBranch === 'Electrical' && selectedSemester == 2) {
+      navigation.navigate('Attandence Electrical 2nd');
+    } else if (selectedBranch === 'Electrical' && selectedSemester == 3) {
+      navigation.navigate('Attandence Electrical 3rd');
+    } else if (selectedBranch === 'Electrical' && selectedSemester == 4) {
+      navigation.navigate('Attandence Electrical 4th');
+    } else if (selectedBranch === 'Electrical' && selectedSemester == 5) {
+      navigation.navigate('Attandence Electrical 5th');
+    }
+    else if (selectedBranch === 'Electronics' && selectedSemester == 6) {
+      navigation.navigate('Attendence Electronics 6th');
+    } else if (selectedBranch === 'Electronics' && selectedSemester == 1) {
+      navigation.navigate('Attandence Electronics 1st');
+    } else if (selectedBranch === 'Electronics' && selectedSemester == 2) {
+      navigation.navigate('Attandence Electronics 2nd');
+    } else if (selectedBranch === 'Electronics' && selectedSemester == 3) {
+      navigation.navigate('Attandence Electronics 3rd');
+    } else if (selectedBranch === 'Electronics' && selectedSemester == 4) {
+      navigation.navigate('Attandence Electronics 4th');
+    } else if (selectedBranch === 'Electronics' && selectedSemester == 5) {
+      navigation.navigate('Attandence Electronics 5th');
+    }
   };
 
   return (
@@ -36,11 +101,13 @@ const AttendanceFirstPage = () => {
         <View
           style={{
             paddingVertical: 50,
-            paddingTop:60,
+            paddingTop: 60,
             paddingHorizontal: 20,
-            shadowColor: '#00dc00',
-            elevation: 40,
-            shadowOpacity: 100,
+            shadowColor: '#00dc00', // Shadow color
+            shadowOffset: { width: 0, height: 2 }, // Added for iOS
+            shadowOpacity: 0.8, // Corrected for iOS, value between 0 and 1
+            shadowRadius: 10, // Added for iOS
+            elevation: 40, // For Android
             borderWidth: 1,
             borderColor: '#00dc00',
             borderRadius: 10,
@@ -66,6 +133,7 @@ const AttendanceFirstPage = () => {
               <Picker.Item label="Electrical" value="Electrical" />
               <Picker.Item label="Mechanical" value="Mechanical" />
               <Picker.Item label="Plastic" value="Plastic" />
+              <Picker.Item label="Civil" value="Civil" />
             </Picker>
           </View>
           <View

@@ -1,3 +1,5 @@
+//Login.js
+
 import React, {useEffect, useState} from 'react';
 import {
   View,
@@ -392,27 +394,6 @@ const Login = props => {
             </View>
           </View>
         </View>
-        {/* <View style={{justifyContent:'center',alignItems:'center'}}>
-      <View >
-        <TouchableOpacity>
-          <View style={{paddingBottom:50}}>
-            <Text style={{color:'white',fontSize:11,fontFamily:'monospace',letterSpacing:1}}>
-              SETUP INSTRUCTIONS
-            </Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-
-      <View>
-        <TouchableOpacity>
-          <View style={{justifyContent:'center',alignItems:'center'}}>
-            <Text style={{color:'white',fontSize:11,fontFamily:'monospace',letterSpacing:1}}>
-              CAN'T LOG IN? EMAIL SUPPORT
-            </Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      </View> */}
       </View>
     </LinearGradient>
     </ScrollView>
